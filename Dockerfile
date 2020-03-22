@@ -9,6 +9,8 @@ ENV NVIM_CONFIG="/config/nvim/init.vim"
 ADD https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim \
     /home/nvim/.config/nvim/autoload/plug.vim
 
+COPY code-templates /home/nvim/.config/code-templates
+
 RUN chown -R nvim /home/nvim
 
 USER nvim

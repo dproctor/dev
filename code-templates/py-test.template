@@ -1,0 +1,12 @@
+"""
+{{CURSOR}}
+"""
+
+import pytest
+
+@pytest.fixture
+def resource() -> str:
+    return "resource"
+
+def test_example(resource):
+    assert resource == "resource"

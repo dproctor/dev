@@ -142,7 +142,7 @@ let g:ale_java_javalsp_executable = "/home/devon/watched-repos/java-language-ser
 """ vim-templates
 let g:tmpl_author_email = "devon.proctor@gmail.com"
 let g:tmpl_author_name = "Devon Proctor"
-let g:tmpl_search_paths = ['~/config/code-templates']
+let g:tmpl_search_paths = ['~/.config/code-templates']
 
 """ Gruvbox
 colorscheme gruvbox
