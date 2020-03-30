@@ -14,24 +14,28 @@ import sys
 def main(arguments):
 
     parser = argparse.ArgumentParser(
-        description=__doc__,
-        formatter_class=argparse.RawDescriptionHelpFormatter)
+        description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter
+    )
 
-    parser.add_argument('-s',
-                        '--string_value',
-                        dest="string_value",
-                        help="Example string argument",
-                        type=str,
-                        required=True)
-    parser.add_argument("-d",
-                        "--date_value",
-                        dest="date_value",
-                        default=date.today(),
-                        type=lambda d: datetime.strptime(d, '%Y-%m-%d').date(),
-                        help="Example date value")
+    parser.add_argument(
+        "-s",
+        "--string_value",
+        dest="string_value",
+        help="Example string argument",
+        type=str,
+        required=True,
+    )
+    parser.add_argument(
+        "-d",
+        "--date_value",
+        dest="date_value",
+        default=date.today(),
+        type=lambda d: datetime.strptime(d, "%Y-%m-%d").date(),
+        help="Example date value",
+    )
 
     args = parser.parse_args(arguments)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     sys.exit(main(sys.argv[1:]))
