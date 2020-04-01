@@ -4,6 +4,9 @@ RUN apt-get update && \
 
 RUN useradd -ms /bin/bash nvim
 
+ENV TZ=America/Los_Angeles
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+
 COPY nvim /home/nvim/.config/nvim
 ENV NVIM_CONFIG="/config/nvim/init.vim"
 ADD https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim \
