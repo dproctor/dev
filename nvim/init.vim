@@ -157,5 +157,8 @@ let g:gradle_show_signs = 0
 """ insert timestamp
 map <Leader>n :r! printf "\# `date +"\%Y-\%m-\%d \%H:\%M:\%S"`" <CR> <End>
 
+""" insert TODO
+map <Leader>t :r! printf -- "- TODO(Devon): " <CR> A
+
 """ add installed python dependencies to path
 set path+=/home/nvim/.local/lib/python3.6/site-packages/
